@@ -8,11 +8,22 @@ type Props = {
   params: Promise<{
     slug: string;
   }>;
+  searchParams: Promise<{
+    dk?: string | string[];
+  }>;
 };
 
-export default async function Page({ params }: Props) {
+export default async function Page({
+  params,
+  searchParams,
+}: Props) {
   const { slug } = await params;
-  const data = await getNewsDetail(slug).catch(notFound);
+  const { dk } = await searchParams;
+  const draftKey = typeof dk === "string" ? dk : undefined;
+
+  const data = await getNewsDetail(slug, {
+    draftKey,
+  }).catch(notFound);
 
   return (
     <>
