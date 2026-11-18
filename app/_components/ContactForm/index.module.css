@@ -1,0 +1,76 @@
+.form {
+  display: grid;
+  gap: 16px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.horizontal {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.item {
+  display: grid;
+  gap: 6px;
+}
+
+.label {
+  font-size: 14px;
+}
+
+.textfield,
+.textarea {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #aaa;
+  border-radius: 4px;
+  background-color: #fff;
+  color: #222;
+  font: inherit;
+}
+
+.textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.actions {
+  margin-top: 12px;
+  text-align: center;
+}
+
+.actions p[role="alert"] {
+  margin: 0 0 8px;
+  color: #b42318;
+  font-size: 14px;
+}
+
+.button {
+  padding: 12px 32px;
+  border: 0;
+  border-radius: 4px;
+  background-color: #222;
+  color: #fff;
+  font: inherit;
+}
+
+.success {
+  box-sizing: border-box;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 32px 16px;
+  border-radius: 4px;
+  background-color: #eee;
+  color: #222;
+  text-align: center;
+  line-height: 1.8;
+}
+
+@media (max-width: 480px) {
+  .horizontal {
+    grid-template-columns: 1fr;
+  }
+}

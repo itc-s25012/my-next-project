@@ -1,0 +1,11 @@
+.container {
+  width: 100%;
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.text {
+  margin: 0 0 32px;
+  text-align: center;
+  line-height: 1.8;
+}
